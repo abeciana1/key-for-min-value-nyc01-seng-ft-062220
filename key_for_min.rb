@@ -1,16 +1,12 @@
-# prereqs: iterators, hashes, conditional logic
-# Given a hash with numeric values, return the key for the smallest value
-
-def key_for_min_value(name_hash)
-  return nil if name_hash.size == 0
+def key_for_min_value(name_hash) 
+  min_v = nil 
+  min_k = nil
   
-  minv = 0 
-  mink = 0
-  
-  name_hash.each do |name, number|
-    if minv > number
-      minv = number
-      mink = name
+  name_hash.each do |name,num| 
+    if min_v == nil || min_v > num 
+      min_v = num 
+      min_k = name
+    end
   end
-  return name_hash
+  min_k 
 end

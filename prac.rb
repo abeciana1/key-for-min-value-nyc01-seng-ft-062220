@@ -2,7 +2,9 @@ ikea = {:chair => 25, :table => 85, :mattress => 450}
 # => :chair
 
 def key_for_min_value(name_hash)
-  return nil if name_hash.length == 0
+  if name_hash.length == 0
+    return nil 
+  end
   
   minv = 0 
   mink = 0

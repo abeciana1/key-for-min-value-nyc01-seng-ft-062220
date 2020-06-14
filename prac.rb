@@ -12,7 +12,7 @@ def key_for_min_value(name_hash)
       minv = number
       mink = name
   end
-  return name_hash
+  name_hash
 end
 
 puts key_for_min_value(ikea)
